@@ -1,0 +1,188 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2,h3 { 
+color: rgb(65, 63, 63);
+
+}
+body { 
+  font-family: 'Lato', sans-serif;
+}
+h3,h4 { 
+  font-weight: 400;
+  color: rgb(100, 98, 98)
+}
+ .library-active { 
+  margin-left: 20%;
+}
+.App { 
+  transition: all 0.5s ease;
+}
+.song_Container { 
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}.song_Container img { 
+  width: 20%;
+  border-radius: 50%;
+}.song_Container h2 { 
+  padding: 3rem 1rem 1rem 1rem
+}.song_Container h3 {
+  font-size: 1rem;
+}
+
+.player { 
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}.time_Control {
+  width: 50%; 
+  display: flex;
+
+}.time_Control input { 
+  width: 100%;
+  padding: 1rem 0rem ;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+}
+
+input[type = "range"]::-webkit-slider-thumb { 
+ -webkit-appearance: none;
+ height: 15px;
+ width: 15px;
+ border-radius: 1rem;
+ background: rgb(217, 138, 228);
+}
+
+
+.time_Control p {
+  padding: 1rem;
+      
+}
+
+.player_control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 30rem;
+}.player_control svg {
+  cursor: pointer;
+}
+
+
+
+/* Library Styles */
+
+.library { 
+  position: fixed;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 50%;
+  box-shadow: 2px 2px 50px rgb(200, 197, 197);
+  overflow: scroll;
+  overflow-x: hidden;
+}.library h2 { 
+  padding: 2rem;
+}
+.library-song  {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+
+}.library-song:hover { 
+  background: rgb(217, 138, 228);
+} 
+
+.library-song img {
+  width: 30%;
+}
+
+.song-description { 
+  padding-left: 1rem;
+}.song-description h3 { 
+  font-size: 1rem;
+}.song-description h4 { 
+  font-size: 0.8rem;
+}
+ 
+
+* ::-webkit-scrollbar  { 
+  width: 6px;
+}
+*::-webkit-scrollbar-track { 
+  background: transparent
+}
+*::-webkit-scrollbar-thumb { 
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20%;
+  border: transparent
+}
+
+
+
+
+
+/* NAV */
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} nav button {
+  background: transparent;
+  border: 2px solid rgb(65, 63, 63);
+  cursor: pointer;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}nav button:hover {
+  background: rgb(65, 63, 63);
+  color: white
+}
+
+.active-library {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.selected { 
+  background: rgb(217, 138, 228);
+};
+
+
+/* NAV */
+
+
+/* MOBILE STYLING  */
+@media screen and (max-width: 768px )  {
+  .song_Container img { 
+    width: 60% !important;
+  } 
+  .time_Control {
+    width: 90%;
+  }
+  .player_control { 
+    width: 60%;
+  }
+
+  nav button { 
+    z-index: 10;
+    opacity: 1;
+
+  }
+}
+
+
+/* MOBILE STYLING  */
